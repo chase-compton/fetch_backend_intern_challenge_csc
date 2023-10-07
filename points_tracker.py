@@ -23,14 +23,18 @@ class PointTracker:
         Returns:
         - tuple: Response message and HTTP status code.
         """
-        self.total_points += points
-
-        heapq.heappush(self.transactions, [timestamp, payer, points])
 
         if payer not in self.points_by_payer:
             self.points_by_payer[payer] = 0
 
+        if self.points_by_payer[payer] + points < 0:
+            return f"Error: This transaction would result in a negative balance for {payer}." ,400
+        
         self.points_by_payer[payer] += points
+
+        self.total_points += points
+
+        heapq.heappush(self.transactions, [timestamp, payer, points])
 
         return "", 200
 
