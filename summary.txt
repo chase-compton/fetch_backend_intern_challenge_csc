@@ -43,7 +43,7 @@ Disadvantages:
         Flask is lightweight and easy to use, it might not be the best choice for highly complex or performance-critical applications because of this. 
         For example, it lacks functions like authentication and authorization which would have to be added via other libraries. 
 	No Logging: 
-        Currently the application lacks logging which would be useful for debugging and monitoring. 
+        Currently, the application lacks logging which would be useful for debugging and monitoring. 
         If this was for a production-level environment, I would certainly add this important feature. 
     Limited Error Handling: 
         Due to the simplicity of the project, I didn’t provide much regarding error handling. 
