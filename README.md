@@ -13,10 +13,10 @@ To run this application and test the API, follow these steps:
    pip install flask
 3. Clone the repo
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/chase-compton/fetch_backend_intern_challenge_csc.git
 4. Navigate to the repo's location
    ```bash
-   cd <repository_name>
+   cd fetch_backend_intern_challenge_csc
 5. Run the application
    ```bash
    python app.py
