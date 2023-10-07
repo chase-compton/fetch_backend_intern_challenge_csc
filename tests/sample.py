@@ -24,7 +24,7 @@ def test_add_endpoint():
 # Function to test the /spend endpoint
 def test_spend_endpoint():
     endpoint = "/spend"
-    data = {"points": 500}
+    data = {"points": 5000}
     response = requests.post(BASE_URL + endpoint, json=data)
     print("Response from /spend endpoint:")
     print(response.status_code)
