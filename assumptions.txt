@@ -1,0 +1,9 @@
+I wanted to track any and all assumptions that I made during my development. 
+I did this in order to hopefully provide some context to some of the design choices I made in the application.
+
+Assumptions:
+  I assumed that adding negative points was valid based on the example solution provided.
+  However, I assumed that adding negative points was only valid as long as the payer's balance remained positive based on the description in the spend endpoint.
+  While the add endpoint did not specifically state this, I decided to do it based on the "use your best judgment" instruction outlined in the FAQs
+
+
