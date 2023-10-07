@@ -1,0 +1,62 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+I decided to use Python for this project, as I consider it my strongest language. 
+However, there are plenty of reasons why Python is a great choice for this task. 
+Its large standard library and abundant third-party frameworks and libraries make it a great language for practically anything. 
+Its simplicity, high-level nature, and strong community also make it perfect for rapid prototyping and development. 
+It is for these reasons and my own experience level with Python that I decided to use it as my language for this task. 
+
+Diving deeper, I decided to use the Python framework, Flask, for this project. 
+It's lightweight and great for building a simple API like this one. 
+Furthermore, I have a familiarity with Flask so getting up to speed was easy and if I did run into any problems, there is a large community of Flask developers that make finding solutions easy. 
+As a part of Flask, I decided to use the blueprint feature which allows for creating components for your main Flask app. 
+This modular approach would make it easy to scale this application while ensuring a maintainable codebase. 
+
+In terms of data structures, I used Python’s dictionary (hashmap) for instant look-up of payer totals and for storing points by payer. 
+However, the core structure that I used was a heap to store transactions based on the timestamp. 
+I used pythons heapq class for this as it is part of the standard library and I have solid experience with it. 
+This allowed me to efficiently add transactions to the list while maintaining the timestamp order. 
+Furthermore, I was able to easily retrieve transactions based on timestamps in the /spend endpoint so that I could fulfill the requirements outlined in the instructions. 
+Using a heap ensures that as the transaction ledger grows, it is still easy and efficient to add to and access the information needed to complete other tasks. 
+
+For testing, I used Postman for my initial testing as it makes this process very quick and simple. 
+As my application neared completion, I decided to use Python’s unit test library in order to write comprehensive test cases for my endpoints. 
+These can be found in the tests directory within the main repository. 
+
+
+2. What are the advantages and disadvantages of your solution?
+
+Advantages:
+	Modular and Organized: 
+        The solution is organized into separate files for better maintainability and readability. 
+        The endpoints, point-tracking logic, and the main application are separate which makes it easy to understand and follow the application's logic. 
+	Easy to Extend and Scale the Codebase: 
+        The modular design allows for easy extension. 
+        If you need to add more endpoints or expand the functionality of existing ones, it can be done with minimal changes.
+	Efficient: 
+        The use of the heapq class ensures that processing transactions when adding or spending points is done in an efficient manner. 
+        Pushing to the heap can be done in a worst-case time complexity of O(log n) and popping from the heap takes a worst-case of O(log n) as well. 
+        However, popping only occurs when we “fully use” the transaction’s points and any other time we just access the transaction which is done in constant time.
+Disadvantages: 
+	Flask Scalability: 
+        While Flask was a good choice for this small task, it wouldn’t necessarily be the best for a production-sized application. 
+        Flask is lightweight and easy to use, it might not be the best choice for highly complex or performance-critical applications because of this. 
+        For example, it lacks functions like authentication and authorization which would have to be added via other libraries. 
+	No Logging: 
+        Currently the application lacks logging which would be useful for debugging and monitoring. 
+        If this was for a production-level environment, I would certainly add this important feature. 
+    Limited Error Handling: 
+        Due to the simplicity of the project, I didn’t provide much regarding error handling. 
+        The error messages give some context but in a production environment, an application would be expected to have a much more robust error-handling process.  
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+
+I'd have to say TurnOne, which is one of my personal projects. 
+It's a social media site where you can share opinions on Formula 1. 
+In terms of challenges, I’d have to say the size of the application was something that initially felt daunting. 
+However, breaking the problems up into doable goals made this process much easier to go through as each part felt like a little task. 
+It was very fun to work through them step by step. First user auth, then posting, then the feed, and then profile pages. 
+I hope to add more to the site in the near future but even now it serves as a sort of MVP and I learned a lot. 
+The technologies I used were Typescript, Tailwind, Next.js, tRPC, Prisma, and Clerk for user auth. 
+And for many of these, it was the first time I used them so the learning experience made it much more rewarding.
+Overall, this project gave me a ton of confidence in my abilities and taught me that if I put my mind to something and plan it out properly, it can be done. 

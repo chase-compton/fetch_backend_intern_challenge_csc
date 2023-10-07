@@ -1,7 +1,10 @@
 import requests
 import json
 
-BASE_URL = "http://127.0.0.1:8000"  # Update with your API URL
+BASE_URL = "http://127.0.0.1:8000" 
+
+# This file, sample.py, is used to test the given example scenario. 
+# After running app.py, run sample.py to verify the correct output 
 
 
 # Function to test the /add endpoint
